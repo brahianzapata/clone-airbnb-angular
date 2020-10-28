@@ -1,0 +1,11 @@
+
+<div class="toolbar">
+    <h3 *ngIf="isToken === true">
+        <a (click)="logout()">Logout</a>
+    </h3>
+    <h2>
+        <a  [routerLink]="['/home']">AirbnbBank</a>
+    </h2>
+    <input  *ngIf="isToken === true" type="text" placeholder="Buscar experiencia..." 
+    (keyup.enter)="buscarExperiece( textobuscar.value)" #textobuscar />
+</div>

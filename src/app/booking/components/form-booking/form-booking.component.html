@@ -1,0 +1,21 @@
+<h3>Booking</h3>
+<section>
+    <form [formGroup]="formGroup" class="form" >
+        <div class="control-form">
+            <label>Fecha Ingreso: </label>
+            <input formControlName="fechaIngreso" type="date" name="dateText" />
+        </div>
+        <span class="error">{{ getError('fechaIngreso')}}</span>
+        <div class="control-form">
+            <label>Fecha Salida: </label>
+            <input formControlName="fechaSalida" type="date" name="dateText" />
+        </div>
+        <span class="error">{{ getError('fechaSalida')}}</span>
+        <div class="control-form"> 
+            <label>Comentarios adicionales: </label>
+            <input formControlName="comentarios" type="text" name="comentariosText" />
+        </div>
+        <br /><br />
+        <button (click)="booking()" [disabled]="formGroup.invalid">Booking</button>
+    </form>
+</section>

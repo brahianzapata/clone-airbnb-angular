@@ -1,0 +1,14 @@
+
+
+
+<div *ngIf="showResult  === false" class="NoResult">
+    <h2>No existen resultado con el termino</h2>
+</div>
+
+<div *ngIf="showResult === true">
+    <app-title [label]="'Lista de experiencias'"></app-title>
+    <hr/>
+    <section *ngFor="let experience of experiences"> 
+        <app-exp-card [experience]="experience"></app-exp-card>
+    </section>
+</div>

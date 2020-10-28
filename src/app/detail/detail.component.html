@@ -1,0 +1,6 @@
+<app-title [label]="title" class="title"></app-title>
+
+<div *ngIf="cargar === false">Espera un momento ....</div>
+<div *ngIf="cargar === true">
+    <app-card [experience]="experience"></app-card>
+</div>

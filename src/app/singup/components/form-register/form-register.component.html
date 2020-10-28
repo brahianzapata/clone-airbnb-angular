@@ -1,0 +1,25 @@
+<h3>Registro</h3>
+<section>
+    <form [formGroup]="formGroup" class="form" >
+        <div class="control-form">
+            <label>Nombre: </label>
+            <input formControlName="name" type="text" name="nameText" />
+        </div>
+        <div class="control-form"> 
+            <label>Telefono: </label>
+            <input formControlName="phone" type="text" name="phoneText" />
+        </div>
+        <div class="control-form">
+            <label>Correo Electronico: </label>
+            <input formControlName="email" type="email" name="emailText" />
+        </div>
+        <span class="error">{{ getError('email')}}</span>
+        <div class="control-form">
+            <label>contraseña: </label>
+            <input formControlName="password" type="password" name="passwordText" />
+        </div>
+        <span class="error">{{ getError('password')}}</span>
+        <br /><br />
+        <button (click)="registro()" >Registrarme</button>
+    </form>
+</section>

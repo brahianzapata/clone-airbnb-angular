@@ -1,0 +1,15 @@
+<h3>Login</h3>
+<section>
+    <form [formGroup]="formGroup" class="form" >
+        <div class="control-form">
+            <label>Correo Electronico: </label>
+            <input formControlName="email" type="email" name="emailText" />
+        </div>
+        <div class="control-form">
+            <label>contraseña: </label>
+            <input formControlName="password" type="password" name="passwordText" />
+        </div>
+        <button (click)="login()" >Login</button>
+    </form>
+</section>
+
